@@ -1,0 +1,171 @@
+{
+  "rowCount": 72,
+  "columnCount": 3,
+  "columns": [
+    {
+      "name": "Timestamp",
+      "type": "temporal",
+      "missingCount": 0,
+      "missingPercentage": 0,
+      "uniqueCount": 72,
+      "sampleValues": [
+        "2024-10-21 00:00:00",
+        "2024-10-21 01:00:00",
+        "2024-10-21 02:00:00",
+        "2024-10-21 03:00:00",
+        "2024-10-21 04:00:00"
+      ]
+    },
+    {
+      "name": "Actual",
+      "type": "numeric",
+      "missingCount": 0,
+      "missingPercentage": 0,
+      "uniqueCount": 67,
+      "sampleValues": [
+        213.5093024030845,
+        569.3031469794618,
+        803.1544725840148,
+        723.6490169557578,
+        739.1176510041246
+      ],
+      "stats": {
+        "min": 0,
+        "max": 1509.44,
+        "mean": 584.95,
+        "median": 688.07,
+        "stdDev": 417,
+        "q1": 214.58,
+        "q3": 918.8,
+        "outlierCount": 0
+      }
+    },
+    {
+      "name": "XGBoost",
+      "type": "numeric",
+      "missingCount": 0,
+      "missingPercentage": 0,
+      "uniqueCount": 72,
+      "sampleValues": [
+        349.1155700683594,
+        427.9273376464844,
+        614.1904907226562,
+        789.2973022460938,
+        815.6893920898438
+      ],
+      "stats": {
+        "min": 70.96,
+        "max": 1266.98,
+        "mean": 591.52,
+        "median": 559.23,
+        "stdDev": 401.56,
+        "q1": 192.55,
+        "q3": 931.22,
+        "outlierCount": 0
+      }
+    }
+  ],
+  "correlations": [
+    {
+      "colA": "Actual",
+      "colB": "XGBoost",
+      "coefficient": 0.96
+    }
+  ],
+  "dataQualityScore": 100,
+  "qualityIssues": [],
+  "insights": [
+    {
+      "id": "insight-max",
+      "type": "record_high",
+      "title": "Peak Actual",
+      "description": "Highest recorded Actual observed is 1,509.44 with a baseline average of 584.95.",
+      "highlightValue": 1509.44,
+      "significance": "high"
+    },
+    {
+      "id": "insight-corr",
+      "type": "strong_correlation",
+      "title": "Actual & XGBoost",
+      "description": "Reveals a strong positive link (Pearson r = 0.96), demonstrating how changes in Actual directly track XGBoost.",
+      "highlightValue": "r = 0.96",
+      "significance": "high"
+    }
+  ],
+  "heroMetric": {
+    "giantNumber": "42.1K",
+    "unitOrPrefix": "",
+    "metricLabel": "Total Aggregated Actual",
+    "subHeadline": "Across 72 verified records",
+    "editorialHook": "From peak fluctuations to underlying structural distributions, discover the defining narrative inside this dataset."
+  },
+  "scrollyChapters": [
+    {
+      "step": 1,
+      "chapterTitle": "The Macro Picture",
+      "narrativeText": "The dataset encompasses 72 observations. Our primary measure, Actual, demonstrates an average level of 584.95 across the sample spectrum.",
+      "keyStat": "72 Records",
+      "focusColumn": "Actual",
+      "chartType": "bar",
+      "viewMode": "all"
+    },
+    {
+      "step": 2,
+      "chapterTitle": "Concentration of Impact",
+      "narrativeText": "Looking closely at top records, significant density forms around the core median values.",
+      "keyStat": "Median Benchmark",
+      "focusColumn": "Timestamp",
+      "chartType": "bar",
+      "viewMode": "top5"
+    },
+    {
+      "step": 3,
+      "chapterTitle": "The Underlying Dynamics",
+      "narrativeText": "Cross-analyzing Actual against XGBoost exposes a coefficient of 0.96. This statistical signature confirms systematic co-movement between both dimensions.",
+      "keyStat": "r = 0.96",
+      "focusColumn": "XGBoost",
+      "chartType": "line",
+      "viewMode": "trend"
+    },
+    {
+      "step": 4,
+      "chapterTitle": "Strategic Takeaways",
+      "narrativeText": "By isolating the structural distribution, decision-makers can calibrate projections against verified historical evidence rather than intuition.",
+      "keyStat": "100% Grounded",
+      "focusColumn": "Actual",
+      "chartType": "bar",
+      "viewMode": "filtered"
+    }
+  ],
+  "recommendedVisualizations": [
+    {
+      "id": "viz-scatter",
+      "title": "Actual vs XGBoost",
+      "subtitle": "Bivariate correlation and cluster mapping",
+      "chartType": "scatter",
+      "xAxisKey": "Actual",
+      "yAxisKey": "XGBoost",
+      "description": "Reveals clustering patterns and correlation trajectories."
+    },
+    {
+      "id": "viz-trend",
+      "title": "Actual Trend over Time",
+      "subtitle": "Timeline trajectory by Timestamp",
+      "chartType": "line",
+      "xAxisKey": "Timestamp",
+      "yAxisKey": "Actual",
+      "description": "Visualizes longitudinal trends and temporal inflection points."
+    }
+  ],
+  "designTheme": {
+    "id": "pudding-dark",
+    "name": "Editorial Obsidian",
+    "primary": "#10b981",
+    "accent": "#f43f5e",
+    "surface": "#0f172a",
+    "text": "#f8fafc",
+    "headingFont": "Playfair Display, serif",
+    "bodyFont": "Inter, sans-serif",
+    "tone": "editorial-dark"
+  }
+}

@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #10b981;
+  --accent: #f43f5e;
+  --surface: #0f172a;
+}
+
+body {
+  color: #f8fafc;
+  background: #0f172a;
+  font-family: Inter, sans-serif;
+  overflow-x: hidden;
+}
+
+.glow-overlay {
+  background: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.12), transparent 70%);
+}
+
+.editorial-serif {
+  font-family: Playfair Display, serif;
+}
